@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
 <title>Title</title>
@@ -15,41 +16,51 @@
     <header class="header-content">
         <h2>Junior Front-end Developer</h2>
         <img src="images/georgipicture.jpg" alt="Georgi" class="responsive-image">
+        <div class="info">
+          <p>Hi, my name is Georgi Ovalov! Since beginning my journey as a freelance designer nearly 10 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.
+             I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time. </p>
+             <div class="blue-rectangle" id="first">
+              <a href="#aboutme"><p>More about me</p></a>
+          </div>
+             <div class="blue-rectangle" id="second">
+              <a href="#myprojects"><p>My projects</p></a>
+          </div>
+          <div class="blue-rectangle" id="third">
+            <a href="#contacts"><p>Contact me</p></a>
+         </div>
+        </div>
         <section id="linkedin">
-                <a href="www.linkedin.com"><img  src="images/link.png" alt="linkedin" class="image"></a>
-                <div class="overlay">Check my LinkedIn</div>
+          <a href="www.linkedin.com"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
         </section>
-        <section id="github">      
-                <a href="www.github.com"><img  src="images/github.jpg" alt="github" class="image"></a>
-                <div class="overlay">Check my Github</div>
+        <section id="github">
+          <a href="www.github.com"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>      
         </section>
     </header>
 
-    <section class="leftbar-content">
+    <section class="submain-content" id="aboutme">
     <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <h3>Education background</h3>
-       <p>Bachelors degree</p>
-       <p>Masters degree</p>
+       <p> 2016 - 2020 Bachelors degree in Web Development / Erhvervsakademi Aarhus</p>
+       <p> 2020 - Present Masters degree in Information Studies / Aalborg universitet</p>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <h3>Work experience</h3>
-        <p>Work experience</p>
+        <p>Front-end Developer intern at ID-advice</p>
+        <p>Web developer intern at Dan-Bul consulting</p>
     </div>
-</div>
-    </section>
-
-    <section class="rightbar-content">
-         <h3>My competencies</h3>
+    <div clas="col-sm-4">
+      <h3>My competencies</h3>
              <li>JavaScript</li>
              <li>HTML</li>
              <li>CSS</li>
              <li>ASP.NET MVC</li>
-             <li>Grid layot</li>
-         
+             <li>Grid layot</li>      
+    </div>
+</div>
     </section>
 
-    <main class="main-content">
+    <main class="main-content" id="myprojects">
       
         <div class="card-group">
             <div class="card" id="project-1">
@@ -106,7 +117,7 @@
           <input type="submit" id="expanding-projects" data-toggle="collapse" data-target=".collapse" value="See more" ></input>
     </main>
 
-    <footer class="footer-content">
+    <footer class="footer-content" id="contacts">
         <p>Footer</p>
     </footer>
 </div>

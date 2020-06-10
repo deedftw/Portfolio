@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
   }
+
 /* main sections styling */
   .wrapper {
     display: grid;
@@ -10,37 +11,31 @@
     grid-template-rows: auto;
     grid-template-areas: 
       "header header header header"
-      "leftbar leftbar rightbar rightbar"
+      "submain submain submain submain"
       "main main main main"
       "footer footer footer footer ";
-    width: 100vw;
     height: 100vh;
   } 
 
 .header-content {
     grid-area: header;
-    background-color: lightgrey;
-    margin: 5px 50px 10px 50px;
+    background-color: none;
+    margin: 5px 50px 300px 50px;
   }
   .main-content {
     grid-area: main;
     background-color: lightgrey;
     margin: 0px 20px 10px 20px;
   }
-  .leftbar-content {
-    grid-area: leftbar;
-    background-color: lightgrey;
-    margin: 0px 20px 10px 10px;
-  }
-  .rightbar-content {
-    grid-area: rightbar;
-    background-color: lightgrey;
-    margin: 0px 10px 10px 0px;
+  .submain-content {
+    grid-area: submain;
+    background-color: lightskyblue;
+    margin: 0px 0px 300px 10px;
   }
   .footer-content {
     grid-area: footer;
     background-color: lightgrey;
-    margin: 0px 5px 5px 5px;
+    margin: 10px 0px 0px 0px;
   }
 
   /* individual element styling */
@@ -81,43 +76,61 @@
   #github {
    float: right;
    position: relative;
-   width: 100%;
    max-width: 300px;
+ 
   }
 
   #linkedin {
     float: left;
     position: relative;
-    width: 100%;
     max-width: 300px;
   }
-
-  .image {
-    display: block;
+  .info {
+    position: relative;
     width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute; 
-    bottom: 0; 
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
     text-align: center;
   }
-  
-  #github:hover .overlay {
-    opacity: 1; 
+ 
+  .fa {
+    padding: 10px;
+    float: right;
   }
 
-  #linkedin:hover .overlay {
-    opacity: 1;
+  a {
+    color: inherit;
+  }
 
-  
+  .blue-rectangle{
+    text-align: center;
+    background:
+      linear-gradient(65deg , transparent 50%,rgba(3,78,136,0.7) 50%) left no-repeat, 
+      linear-gradient(0deg , rgba(3,78,136,0.7),rgba(3,78,136,0.7)) 30px 0 no-repeat;
+    width:200px;
+    height:60px;
+    line-height:60px;
+    padding:0 20px;
+    color:white;
+    margin:20px auto;
+    position:relative;
+    display: inline-block;
+  }
+
+  #first {
+    background-size:100px 100%, 100% 100%;
+  }
+
+  #second {
+    background-size:100px 100%, 100% 100%;
+  }
+
+  #third {
+    background-size:100px 100%, 100% 100%;
+  }
+
+  /* Media queries */
+
+  @media all and (max-width: 768px){
+    #first, #second, #third {
+        display: none;
+    }
+  }

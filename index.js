@@ -30,3 +30,25 @@ const fnmap = {
       this.value = (this.value == 'See more' ? 'See less' : 'See more');
   }
   document.getElementById('expanding-projects').onclick=changeTextButton;
+
+  // animation of scrolling between sections 
+ 
+        let anchorSelector = 'a[href^="#"]'; 
+    
+        let anchorList =  
+            document.querySelectorAll(anchorSelector); 
+                
+        anchorList.forEach(link => { 
+            link.onclick = function (e) { 
+                    
+                e.preventDefault(); 
+                         
+                let destination =  
+                    document.querySelector(this.hash); 
+   
+                destination.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                }); 
+            } 
+        }); 
