@@ -14,8 +14,14 @@
 <div class="wrapper">
     <header class="header-content">
         <h2>Junior Front-end Developer</h2>
-        <img src="images/georgi_linked_in.png" alt="Georgi" class="responsive-image">
-        <section>
+        <img src="images/georgipicture.jpg" alt="Georgi" class="responsive-image">
+        <section id="linkedin">
+                <a href="www.linkedin.com"><img  src="images/link.png" alt="linkedin" class="image"></a>
+                <div class="overlay">Check my LinkedIn</div>
+        </section>
+        <section id="github">      
+                <a href="www.github.com"><img  src="images/github.jpg" alt="github" class="image"></a>
+                <div class="overlay">Check my Github</div>
         </section>
     </header>
 
@@ -46,7 +52,7 @@
     <main class="main-content">
       
         <div class="card-group">
-            <div class="card">
+            <div class="card" id="project-1">
               <img src="images/project_image.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 1</h5>
@@ -54,7 +60,7 @@
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="project-2">
               <img src="images/project_image.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 2</h5>
@@ -62,7 +68,7 @@
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="project-3">
               <img src="images/project_image.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 3</h5>
@@ -70,16 +76,34 @@
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
             </div>
-            <div class="card">
-                <img src="images/project_image.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Project 4</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
           </div>
-
+          <div class="card-group collapse" id="extended-projects">
+            <div class="card" id="project-4" style="none">
+              <img src="images/project_image.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 4</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card collapse" id="project-5">
+              <img src="images/project_image.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 5</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card collapse" id="project-6">
+              <img src="images/project_image.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 6</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+          <input type="submit" id="expanding-projects" data-toggle="collapse" data-target=".collapse" value="See more" ></input>
     </main>
 
     <footer class="footer-content">
@@ -87,6 +111,7 @@
     </footer>
 </div>
 
+<script src="index.js"></script>
  
 </body>
 </html>
