@@ -4,6 +4,11 @@
     padding: 0;
   }
 
+  body {
+    font-family: 'Ubuntu';font-size: 22px;
+  }
+  
+
 /* main sections styling */
   .wrapper {
     display: grid;
@@ -15,22 +20,27 @@
       "main main main main"
       "footer footer footer footer ";
     height: 100vh;
+    background-image: url('images/coding-wallpaper.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position:center;
+    color: white;
   } 
 
 .header-content {
     grid-area: header;
     background-color: none;
     margin: 5px 50px 300px 50px;
+    margin-top: 110px;
   }
   .main-content {
     grid-area: main;
-    background-color: lightgrey;
+    background-color: #fff;
     margin: 0px 20px 10px 20px;
   }
   .submain-content {
     grid-area: submain;
-    background-color: lightskyblue;
-    margin: 0px 0px 300px 10px;
+    margin: 0px 0px 100px 10px;
   }
   .footer-content {
     grid-area: footer;
@@ -57,6 +67,10 @@
     text-align: center;
 }
 
+  h5 {
+   text-align: center;
+}
+
 .responsive-image {
    width: 100%;
    max-width: 120px;
@@ -77,7 +91,10 @@
    float: right;
    position: relative;
    max-width: 300px;
- 
+  }
+
+  #github .fa {
+    color: #fafafa;
   }
 
   #linkedin {
@@ -85,10 +102,20 @@
     position: relative;
     max-width: 300px;
   }
+  
+  #linkedin .fa {
+    color: #2867B2;
+  }
+
   .info {
     position: relative;
     width: 100%;
     text-align: center;
+  }
+
+  #my-description {
+    width: 40%;
+    margin:auto;
   }
  
   .fa {
@@ -100,39 +127,12 @@
     color: inherit;
   }
 
-  .blue-rectangle{
-    text-align: center;
-    background:
-      linear-gradient(65deg , transparent 50%,rgba(3,78,136,0.7) 50%) left no-repeat, 
-      linear-gradient(0deg , rgba(3,78,136,0.7),rgba(3,78,136,0.7)) 30px 0 no-repeat;
-    width:200px;
-    height:60px;
-    line-height:60px;
-    padding:0 20px;
-    color:white;
-    margin:20px auto;
-    position:relative;
-    display: inline-block;
-  }
-
-  #first {
-    background-size:100px 100%, 100% 100%;
-  }
-
-  #second {
-    background-size:100px 100%, 100% 100%;
-  }
-
-  #third {
-    background-size:100px 100%, 100% 100%;
-  }
-
   .image-box img {
     max-width: 100%;
     transition: all 0.3s;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     transform: scale(1);
     opacity: 0.8;
 }
@@ -142,10 +142,164 @@
     opacity: 1;
 }
 
+.button-content-style {
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#about-nav {
+  background: linear-gradient(to right,#403b4a, #eef2f3) !important;
+}
+#myprojects-nav {
+  background: linear-gradient(to right,#e7e9bb ,#a8caba) !important;
+}
+#contacts-nav {
+  background: linear-gradient(to right,#283048 ,#859398) !important;
+}
+
+.button-content-style span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+  margin: auto;
+  width: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+.button-content-style span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button-content-style:hover span {
+  padding-right: 25px;
+}
+.button-content-style:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-content {
+  display: inline-block;
+}
+
+.button-projects {
+  text-align: right;
+}
+
+.button-visit-project {
+  border-radius: 4px;
+  background: linear-gradient(to right,#ffff00, #67b26b) !important;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 5px;
+  transition: all 0.4s;
+  cursor: pointer;
+  display: relative;
+}
+
+.button-visit-project:link, .button-visit-project:visited {
+  text-decoration: none;
+}
+
+.button-visit-project span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.button-visit-project span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button-visit-project:hover span {
+  padding-right: 25px;
+}
+.button-visit-project:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#submain-title {
+  text-align: center;
+  color: #000;
+}
+
+#submain-list {
+  text-align: center;
+  list-style: none;
+  color: #000;
+}
+
+#submain-text {
+  text-align: center;
+  color: #000;
+}
+
+.technologies-used {
+  font-size: 16px;
+}
+
+#project-1 {
+  margin-right: 25px;
+}
+
+#project-2 {
+  margin-right: 25px;
+}
+
+#contacts {
+  padding: 50px;
+}
+
+#contacts p {
+  text-align: center;
+}
+.fa {
+  float: none;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 5px;
+  width: 30%;
+}
+
   /* Media queries */
 
   @media all and (max-width: 768px){
-    #first, #second, #third {
+    .button-content-style {
         display: none;
+    }
+
+    #my-description {
+      width: 100%;
+      margin:auto;
     }
   }
