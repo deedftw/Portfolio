@@ -4,8 +4,14 @@
     padding: 0;
   }
 
-  body {
+  html, body {
     font-family: 'Ubuntu';font-size: 22px;
+    background-color: #1f2833;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
   }
   
 
@@ -25,27 +31,37 @@
     background-size: cover;
     background-position:center;
     color: white;
+    background-color: #1f2833;
+    background-blend-mode: screen;
   } 
 
 .header-content {
     grid-area: header;
     background-color: none;
-    margin: 5px 50px 300px 50px;
-    margin-top: 110px;
+    margin: 150px 0px 300px 0px;
+
   }
   .main-content {
     grid-area: main;
-    background-color: #fff;
-    margin: 0px 20px 10px 20px;
+    background-color: #45A29F;
+    margin: 150px 0px 0px 0px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .submain-content {
     grid-area: submain;
-    margin: 0px 0px 100px 10px;
+    margin: 120px 0px 100px 10px;
+    background-color: #1f2833;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
+
   .footer-content {
     grid-area: footer;
     background-color: lightgrey;
-    margin: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    color: #fff;
+    background: #1f2833;
   }
 
   /* individual element styling */
@@ -63,8 +79,15 @@
     animation-duration: 0.3s;
   }
 
+  h1 {
+    text-align: center;
+    font-size: 100px;
+  }
+
   h2 {
     text-align: center;
+    color: #1f2833;
+    font-weight: bold;
 }
 
   h5 {
@@ -85,6 +108,8 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
+  color: #1f2833;
+  background-color: #C5C6C7;
   }
 
   #github {
@@ -94,7 +119,7 @@
   }
 
   #github .fa {
-    color: #fafafa;
+    color: #fff;
   }
 
   #linkedin {
@@ -104,7 +129,7 @@
   }
   
   #linkedin .fa {
-    color: #2867B2;
+    color: #fff;
   }
 
   .info {
@@ -149,23 +174,20 @@
   text-transform: uppercase;
   font-size: 22px;
   padding: 20px;
-  width: 200px;
-  height: 200px;
   transition: all 0.4s;
   cursor: pointer;
   margin: 5px;
-  display: inline-block;
-  border-radius: 50%;
+  border: 2px solid #1f2833;
 }
 
 #about-nav {
-  background: linear-gradient(to right,#403b4a, #eef2f3) !important;
+
 }
 #myprojects-nav {
-  background: linear-gradient(to right,#e7e9bb ,#a8caba) !important;
+  
 }
 #contacts-nav {
-  background: linear-gradient(to right,#283048 ,#859398) !important;
+
 }
 
 .button-content-style span {
@@ -205,8 +227,7 @@
 
 .button-visit-project {
   border-radius: 4px;
-  background: linear-gradient(to right,#ffff00, #67b26b) !important;
-  color: #FFFFFF;
+  color: #1f2833;
   text-align: center;
   text-transform: uppercase;
   font-size: 22px;
@@ -214,6 +235,7 @@
   transition: all 0.4s;
   cursor: pointer;
   display: relative;
+  border: 2px solid #1f2833;
 }
 
 .button-visit-project:link, .button-visit-project:visited {
@@ -225,6 +247,8 @@
   display: inline-block;
   position: relative;
   transition: 0.4s;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 .button-visit-project span:after {
   content: '\00bb';
@@ -244,29 +268,36 @@
 
 #submain-title {
   text-align: center;
-  color: #000;
+  color: #45A29F;
+  font-weight: bold;
 }
 
 #submain-list {
   text-align: center;
   list-style: none;
-  color: #000;
+  color: #fff;
 }
 
 #submain-text {
   text-align: center;
-  color: #000;
+  color: #fff;
 }
 
 .technologies-used {
-  font-size: 16px;
+  font-size: 24px;
+  color: #1f2833;
+  font-weight: bold;
+}
+
+.technologies-list {
+  color: #fff;
 }
 
 #project-1 {
   margin-right: 25px;
 }
 
-#project-2 {
+#project-3 {
   margin-right: 25px;
 }
 
@@ -289,6 +320,21 @@ hr {
   margin-right: auto;
   border-width: 5px;
   width: 30%;
+  background-color: #1E434C;
+}
+
+.card-body {
+  background-color: #45A29F;
+}
+
+.card-title {
+  color: #1f2833;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card-text {
+  color: #fff;
 }
 
   /* Media queries */
@@ -302,4 +348,12 @@ hr {
       width: 100%;
       margin:auto;
     }
-  }
+
+    #project-1 {
+      margin-right: 0px;
+    }
+    
+    #project-3 {
+      margin-right: 0px;
+    }
+}
