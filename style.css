@@ -12,6 +12,7 @@
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   
 
@@ -31,7 +32,7 @@
     background-size: cover;
     background-position:center;
     color: white;
-    background-color: #1f2833;
+    background-color: transparent;
     background-blend-mode: screen;
   } 
 
@@ -43,17 +44,17 @@
   }
   .main-content {
     grid-area: main;
-    background-color: #45A29F;
-    margin: 150px 0px 0px 0px;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    background-color: #fff;
+    margin: 0px 0px 0px 0px;
+    padding-top: 150px;
+    padding-bottom: 100px;
   }
   .submain-content {
     grid-area: submain;
-    margin: 120px 0px 100px 10px;
+    margin: 0px 0px 0px 0px;
     background-color: #1f2833;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-top: 100px;
   }
 
   .footer-content {
@@ -90,8 +91,18 @@
     font-weight: bold;
 }
 
+h4 {
+  font-weight: bold;
+}
+
   h5 {
    text-align: center;
+}
+
+h6 {
+  text-align: left;
+  color: #fff;
+  margin-left: 115px !important;
 }
 
 .responsive-image {
@@ -104,6 +115,33 @@
    border-radius: 50%;
   }
 
+  .responsive-image-logo {
+    width: 100%;
+    max-width: 56px;
+    max-height: 56px;
+    margin-left: 25px !important;
+    position: aboslute;
+    display: block;
+    border-radius: 0%;
+    float: left;
+    background-color: #fff;
+   }
+   
+   .responsive-language-logo {
+    width: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    margin-left: 25px !important;
+    position: aboslute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0%;
+    float: left;
+    background-color: #fff;
+   }
+
+
   #expanding-projects {
   display: block;
   margin-right: auto;
@@ -113,23 +151,25 @@
   }
 
   #github {
-   float: right;
    position: relative;
    max-width: 300px;
+   margin-left: auto;
+  margin-right: auto;
   }
 
   #github .fa {
-    color: #fff;
+    color: #000;
   }
 
   #linkedin {
-    float: left;
     position: relative;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   #linkedin .fa {
-    color: #fff;
+    color: #000;
   }
 
   .info {
@@ -177,17 +217,16 @@
   transition: all 0.4s;
   cursor: pointer;
   margin: 5px;
-  border: 2px solid #1f2833;
 }
 
 #about-nav {
-
+  color: #fff;
 }
 #myprojects-nav {
-  
+  color: #fff;
 }
 #contacts-nav {
-
+ color: #fff;
 }
 
 .button-content-style span {
@@ -197,9 +236,10 @@
   transition: 0.4s;
   margin: auto;
   width: 150px;
-  line-height: 150px;
+  line-height: 50px;
   text-align: center;
   font-size: 20px;
+  margin-top: 50px;
 }
 .button-content-style span:after {
   content: '\00bb';
@@ -211,19 +251,23 @@
 }
 .button-content-style:hover span {
   padding-right: 25px;
+  border-bottom: 3px solid #1E434C;
 }
 .button-content-style:hover span:after {
   opacity: 1;
   right: 0;
 }
 
+.button-content-style a:hover {
+  
+    color: red;
+  
+}
+
 .button-content {
   display: inline-block;
 }
 
-.button-projects {
-  text-align: right;
-}
 
 .button-visit-project {
   border-radius: 4px;
@@ -267,7 +311,7 @@
 }
 
 #submain-title {
-  text-align: center;
+  text-align: center;;
   color: #45A29F;
   font-weight: bold;
 }
@@ -279,9 +323,26 @@
 }
 
 #submain-text {
-  text-align: center;
+  text-align: left;;
   color: #fff;
+  font-size: 18px;
+  margin-left: 115px !important;
 }
+
+#submain-text-description {
+  text-align: left;;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 115px !important;
+}
+
+#submain-text-year {
+  text-align: left;;
+  color: #fff;
+  font-size: 13px;
+  margin-left: 115px !important;
+}
+
 
 .technologies-used {
   font-size: 24px;
@@ -290,7 +351,7 @@
 }
 
 .technologies-list {
-  color: #fff;
+  color: #1f2833;
 }
 
 #project-1 {
@@ -324,7 +385,7 @@ hr {
 }
 
 .card-body {
-  background-color: #45A29F;
+  background-color: #fff;
 }
 
 .card-title {
@@ -334,10 +395,105 @@ hr {
 }
 
 .card-text {
-  color: #fff;
+  color: #1f2833;
 }
 
+.project-info {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+
+.project-part {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-image {
+  text-align: center;
+  width: 50%;
+  float: right;
+}
+
+
+.responsive {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+}
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.col-sm-12 {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+
+.devicon-html5-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-css3-plain-wordmark {
+ font-size: 100px;
+}
+
+.devicon-javascript-plain {
+  font-size: 100px;
+}
+
+.devicon-bootstrap-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-csharp-plain {
+  font-size: 100px;
+}
+
+.devicon-dot-net-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-jquery-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-react-original-wordmark {
+  font-size: 100px;
+}
+
+.devicon-trello-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-wordpress-plain-wordmark {
+  font-size: 100px;
+}
+
+.devicon-photoshop-plain {
+  font-size: 100px;
+}
+
+.content h3,
+.content p {margin: 0;}
   /* Media queries */
+
+  @media all and (max-width: 1260px){
+
+    .project-info, .project-image {
+      width:100%;
+    }
+
+}
 
   @media all and (max-width: 768px){
     .button-content-style {
@@ -356,4 +512,9 @@ hr {
     #project-3 {
       margin-right: 0px;
     }
-}
+
+    .img {
+        float: left;
+        width: 50%;
+    }
+  }
