@@ -14,19 +14,22 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
-  
+  .container-wrap {
+    max-width: 2560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 
 /* main sections styling */
   .wrapper {
     display: grid;
-    grid-auto-columns: 100vw, 100vh ;
     grid-template-rows: auto;
     grid-template-areas: 
       "header header header header"
       "submain submain submain submain"
       "main main main main"
       "footer footer footer footer ";
-    height: 100vh;
     background-image: url('images/coding-wallpaper.jpg');
     background-repeat: no-repeat, repeat;
     background-size: cover;
@@ -38,15 +41,14 @@
 
 .header-content {
     grid-area: header;
-    background-color: none;
-    margin: 150px 0px 300px 0px;
-
+    margin: 60px 0px 60px 0px;
   }
+
   .main-content {
     grid-area: main;
     background-color: #fff;
     margin: 0px 0px 0px 0px;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
   .submain-content {
@@ -91,6 +93,11 @@
     font-weight: bold;
 }
 
+h3 {
+  font-weight: bold;
+  color: #1f2833;
+}
+
 h4 {
   font-weight: bold;
 }
@@ -120,7 +127,7 @@ h6 {
     max-width: 56px;
     max-height: 56px;
     margin-left: 25px !important;
-    position: aboslute;
+    position: absolute;
     display: block;
     border-radius: 0%;
     float: left;
@@ -132,7 +139,7 @@ h6 {
     max-width: 120px;
     max-height: 120px;
     margin-left: 25px !important;
-    position: aboslute;
+    position: absolute;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -152,24 +159,22 @@ h6 {
 
   #github {
    position: relative;
-   max-width: 300px;
-   margin-left: auto;
-  margin-right: auto;
+   width: 50%;
+
   }
 
   #github .fa {
-    color: #000;
+    color: #fff;
   }
 
   #linkedin {
     position: relative;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50%;
+    text-align: right;
   }
   
   #linkedin .fa {
-    color: #000;
+    color: #fff;
   }
 
   .info {
@@ -188,8 +193,13 @@ h6 {
     float: right;
   }
 
+  .fa-5x {
+    font-size: 60px;
+  }
+
   a {
     color: inherit;
+    text-align: center;
   }
 
   .image-box img {
@@ -278,7 +288,6 @@ h6 {
   padding: 5px;
   transition: all 0.4s;
   cursor: pointer;
-  display: relative;
   border: 2px solid #1f2833;
 }
 
@@ -310,33 +319,38 @@ h6 {
   right: 0;
 }
 
-#submain-title {
+.submain-title {
   text-align: center;;
   color: #45A29F;
   font-weight: bold;
 }
 
-#submain-list {
+.submain-list {
   text-align: center;
   list-style: none;
   color: #fff;
 }
 
-#submain-text {
+.submain-list li {
+  display: inline-block;
+}
+
+.submain-text {
   text-align: left;;
   color: #fff;
   font-size: 18px;
   margin-left: 115px !important;
 }
 
-#submain-text-description {
+.submain-description {
   text-align: left;;
   color: #fff;
   font-size: 16px;
   margin-left: 115px !important;
+  max-width: 1200px;
 }
 
-#submain-text-year {
+.submain-year {
   text-align: left;;
   color: #fff;
   font-size: 13px;
@@ -396,6 +410,7 @@ hr {
 
 .card-text {
   color: #1f2833;
+  text-align: center;
 }
 
 .project-info {
@@ -494,6 +509,7 @@ hr {
     }
 
 }
+
 
   @media all and (max-width: 768px){
     .button-content-style {
