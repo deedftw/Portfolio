@@ -13,7 +13,20 @@
     padding: 0px;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    animation: fadeInAnimation ease-out 3s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: backwards; 
   }
+
+  @keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
+
   .container-wrap {
     max-width: 2560px;
     margin-left: auto;
@@ -110,6 +123,7 @@ h6 {
   text-align: left;
   color: #fff;
   margin-left: 115px !important;
+  margin-right: 25px !important;
 }
 
 .responsive-image {
@@ -340,6 +354,7 @@ h6 {
   color: #fff;
   font-size: 18px;
   margin-left: 115px !important;
+  margin-right: 25px !important;
 }
 
 .submain-description {
@@ -347,6 +362,7 @@ h6 {
   color: #fff;
   font-size: 16px;
   margin-left: 115px !important;
+  margin-right: 25px !important;
   max-width: 1200px;
 }
 
@@ -500,6 +516,29 @@ hr {
 
 .content h3,
 .content p {margin: 0;}
+
+/* Scrollbar styling */ 
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #45A29F; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1E434C; 
+}
+
+
+
   /* Media queries */
 
   @media all and (max-width: 1260px){
@@ -516,8 +555,14 @@ hr {
         display: none;
     }
 
+    ::-webkit-scrollbar {
+      display: none;
+      scrollbar-width: none;
+      -ms-overflow-style: none
+  }
+
     #my-description {
-      width: 100%;
+      width: 90%;
       margin:auto;
     }
 
@@ -532,5 +577,10 @@ hr {
     .img {
         float: left;
         width: 50%;
+    }
+
+    .submain-description {
+      margin-left: 50px !important;
+      margin-right: 25px !important;
     }
   }
