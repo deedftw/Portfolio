@@ -4,16 +4,26 @@
     padding: 0;
   }
 
-  html, body {
-    font-family: 'Ubuntu';font-size: 22px;
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+ 
+
+
+ body {
+    font-family: 'Montserrat' 'sans-serif';font-size: 22px;
     background-color: #1f2833;
+    position: relative !important;
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
-    animation: fadeInAnimation ease-out 3s; 
+    animation: fadeInAnimation ease-out 1.5s; 
             animation-iteration-count: 1; 
             animation-fill-mode: backwards; 
   }
@@ -33,8 +43,67 @@
     margin-right: auto;
   }
 
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #1f2833 !important;
+  }
 
-/* main sections styling */
+  .navbar .collapse {
+    background-color: #1f2833 !important;
+  }
+
+ .nav-link {
+   font-weight: bold !important;
+   font-size: 18px;
+  }
+
+  nav.sticky-top {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url('images/navbar-toggler-icon.png');
+  }
+
+  .close {
+    font-size: 27px !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+  }
+  
+
+  .navbar-toggler>.close {
+    display:inline;
+    color: #45A29F;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
+
+
+  .navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+img.logo-navbar {
+  width: 5rem !important;
+  height: 3rem !important;
+}
+
+
+  .active {
+    border-bottom: 3px solid #45A29F;
+  }
+
+  
   .wrapper {
     display: grid;
     grid-template-rows: auto;
@@ -43,6 +112,7 @@
       "submain submain submain submain"
       "main main main main"
       "footer footer footer footer ";
+      background-color: black;
     background-image: url('images/coding-wallpaper.jpg');
     background-repeat: no-repeat, repeat;
     background-size: cover;
@@ -54,7 +124,8 @@
 
 .header-content {
     grid-area: header;
-    margin: 60px 0px 60px 0px;
+    margin: 120px 0px 120px 0px;
+    
   }
 
   .main-content {
@@ -393,7 +464,7 @@ h6 {
 }
 
 #contacts {
-  padding: 50px;
+  padding-top: 150px;
 }
 
 #contacts p {
@@ -539,6 +610,7 @@ hr {
 
 
 
+
   /* Media queries */
 
   @media all and (max-width: 1260px){
@@ -549,8 +621,20 @@ hr {
 
 }
 
-
   @media all and (max-width: 768px){
+    .navbar {
+      height: 70px;
+    }
+
+    .nav-link {
+      margin-top: 50px;
+    }
+
+    .navbar .collapse {
+      height: 100vh;
+      padding-left: 0;
+    }
+
     .button-content-style {
         display: none;
     }
@@ -584,3 +668,4 @@ hr {
       margin-right: 25px !important;
     }
   }
+

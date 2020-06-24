@@ -53,3 +53,13 @@ const fnmap = {
             } 
         }); 
 
+        $(document).ready(function() {
+  $('.navbar').on('show.bs.collapse', function() {
+    $(this).addClass('open');
+  });
+  $('.navbar').on('hidden.bs.collapse', function() {
+    $(this).removeClass('open');
+  });
+});
+
+
