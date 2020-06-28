@@ -293,6 +293,10 @@ h7 {
     color: #45A29F;
   }
 
+ .gh-logo {
+   margin-left: 5px;
+ }
+
   #linkedin {
     position: relative;
     width: 50%;
@@ -501,7 +505,7 @@ h7 {
 .submain-description {
   text-align: left;;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   margin-left: 115px !important;
   margin-right: 25px !important;
   margin-bottom: 50px;
@@ -560,6 +564,11 @@ hr {
 .card-body {
   background-color: #fff;
   padding: 0px;
+  margin-bottom: 150px;
+}
+
+.last-project {
+  margin-bottom: 0px;
 }
 
 .card-title {
@@ -572,8 +581,9 @@ hr {
 .card-text {
   color: #1f2833;
   text-align: center;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
+  font-size: 17px;
 }
 
 .project-info {
@@ -594,6 +604,11 @@ hr {
   text-align: center;
   width: 50%;
   float: right;
+  margin-bottom: 150px;
+}
+
+.last-image {
+  margin-bottom: 0px;
 }
 
 
@@ -752,6 +767,10 @@ hr {
       width:100%;
     }
 
+    .card-body {
+      margin-bottom: 0px !important;
+    }
+
 }
 
 @media (max-width: 991.98px) {
@@ -799,6 +818,12 @@ hr {
     padding-left: 0;
     margin-top: 20px;
 }
+
+.card-text {
+  width: 80%;
+}
+
+
 }
 
 @media (max-width: 991.98px) {
